@@ -73,7 +73,7 @@ st.divider()
 # ---------------------------------------------------
 # HERO
 # ---------------------------------------------------
-
+'''
 st.image("assets/hero.png", use_container_width=True)
 
 st.markdown(
@@ -130,7 +130,7 @@ for col, card in zip([step1, step2, step3, step4], cards):
             st.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
-
+'''
 # ---------------------------------------------------
 # PROJECT DETAILS
 # ---------------------------------------------------
