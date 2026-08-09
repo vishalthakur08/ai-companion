@@ -73,64 +73,8 @@ st.divider()
 # ---------------------------------------------------
 # HERO
 # ---------------------------------------------------
-'''
-st.image("assets/hero.png", use_container_width=True)
-
-st.markdown(
-    """
-<div style="
-margin-top:-230px;
-padding:48px;
-height:220px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-color:white;
-">
-   
-</div>
-""",
-    unsafe_allow_html=True,
-)
-
-st.markdown("<div style='height:60px'></div>", unsafe_allow_html=True)
 
 
-st.markdown("## How it Works")
-
-# Define cards as (icon_path, title, description)
-cards = [
-    ("assets/careem_logo.svg", "Describe Your Problem", "Tell AI about the screen you're designing."),
-    ("assets/careem_logo.svg", "AI Analyzes the Problem", "Understands goals, users and UX challenges."),
-    ("assets/careem_logo.svg", "Explore Layout Strategies", "Compare multiple layout approaches."),
-    ("assets/careem_logo.svg", "Generate UX Blueprint", "Create a detailed implementation blueprint."),
-]
-
-step1, step2, step3, step4 = st.columns(4, gap="large")
-
-for col, card in zip([step1, step2, step3, step4], cards):
-    with col:
-        with st.container(border=False):
-            st.markdown("""
-            <div style='
-                background:#F4F7FB;
-                border-radius:24px;
-                padding:28px;
-                min-height:320px;
-                text-align:center;
-            '>
-            """, unsafe_allow_html=True)
-
-            st.markdown("<div style='height:8px'></div>", unsafe_allow_html=True)
-            st.image(card[0], width=90)
-            st.markdown("<div style='height:18px'></div>", unsafe_allow_html=True)
-            st.markdown(f"### {card[1]}")
-            st.caption(card[2])
-
-            st.markdown("</div>", unsafe_allow_html=True)
-
-st.markdown("<br>", unsafe_allow_html=True)
-'''
 # ---------------------------------------------------
 # PROJECT DETAILS
 # ---------------------------------------------------
