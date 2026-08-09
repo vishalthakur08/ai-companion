@@ -79,8 +79,6 @@ st.divider()
 # PROJECT DETAILS
 # ---------------------------------------------------
 
-st.markdown("## Project Details")
-
 form_col_left, form_col_center, form_col_right = st.columns([1, 2, 1])
 
 with form_col_center:
