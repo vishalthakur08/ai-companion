@@ -462,7 +462,13 @@ if generate:
 
     progress.progress(40)
 
+
+    try:
     response = generate_response(prompt)
+except Exception as e:
+    st.error("AI returned an invalid response. Please try again.")
+    st.code(str(e))
+    st.stop()
 
     status.write("💡 Preparing recommendations...")
 
