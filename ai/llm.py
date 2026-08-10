@@ -1,10 +1,33 @@
 import json
 import os
-
+import re
 import requests
 from dotenv import load_dotenv
 
 load_dotenv()
+
+def extract_json(text: str):
+    if not text or not text.strip():
+        raise ValueError("LLM returned empty response")
+
+    text = text.strip()
+    text = text.replace("```json", "").replace("```", "").strip()
+
+    # Try direct parse first
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+
+    # Try to extract the first JSON object from a messy response
+    match = re.search(r"\{.*\}", text, re.DOTALL)
+    if match:
+        return json.loads(match.group(0))
+
+    raise ValueError(f"Could not parse JSON from response: {text[:500]}")
+
+return extract_json(content)
+
 
 
 def generate_response(prompt: str):
