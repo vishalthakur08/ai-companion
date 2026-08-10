@@ -25,8 +25,7 @@ def extract_json(text: str):
         return json.loads(match.group(0))
 
     raise ValueError(f"Could not parse JSON from response: {text[:500]}")
-
-return extract_json(content)
+    return extract_json(content)
 
 
 
