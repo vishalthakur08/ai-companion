@@ -464,11 +464,11 @@ if generate:
 
 
     try:
-    response = generate_response(prompt)
-except Exception as e:
-    st.error("AI returned an invalid response. Please try again.")
-    st.code(str(e))
-    st.stop()
+        response = generate_response(prompt)
+    except Exception as e:
+        st.error("AI returned an invalid response. Please try again.")
+        st.code(str(e))
+        st.stop()
 
     status.write("💡 Preparing recommendations...")
 
